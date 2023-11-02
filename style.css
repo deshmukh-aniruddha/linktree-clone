@@ -1,0 +1,752 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure text areas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.hero {
+  padding: 100px 0px;
+  background: #254f1a;
+}
+
+.container {
+  position: fixed;
+  top: 7%;
+  left: 1.75%;
+  width: 96.5%;
+  background: white;
+  display: flex;
+  align-items: center;
+  /* margin: 50px auto; */
+  padding: 12px 15px;
+  border-radius: 80px;
+  z-index: 1000;
+}
+
+/* .container > * {
+  border: 1px solid black;
+} */
+
+.container .logo {
+  margin-left: 30px;
+}
+
+.container .logo img {
+  height: 25px;
+  width: 120px;
+}
+
+.container .main-menu {
+  margin-left: 20px;
+  width: 50%;
+}
+
+.container .main-menu ul {
+  padding: 0px;
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  margin: auto;
+}
+
+.container .main-menu ul li {
+  margin-right: 15px;
+  font-size: 1rem;
+  letter-spacing: -0.003rem;
+}
+
+.container .main-menu ul li a {
+  text-decoration: none;
+  color: grey;
+  font-weight: 500;
+  transition: background 0.9ms ease-in-out;
+  padding: 10px;
+}
+
+.container .main-menu ul li a:hover {
+  background: rgb(239, 240, 236);
+  padding: 13px 10px;
+  border-radius: 8px;
+}
+
+.container .buttons {
+  margin-left: auto;
+  border: none;
+}
+
+.container .buttons .btn {
+  border: none;
+  padding: 20px 23px;
+  font-weight: 600;
+}
+.container .buttons .btn-1 {
+  background: #f3f3f1;
+  color: #1e2330;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.container .buttons .btn-2 {
+  color: white;
+  background: #212124;
+  padding: 20px 28px;
+  border-radius: 65px;
+}
+.container .buttons a {
+  text-decoration: none;
+}
+
+.hero .hero-grid {
+  width: 95%;
+  margin: 100px auto;
+  display: grid;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 0px;
+}
+
+.hero .hero-grid .heading-content {
+  /* font-family: "Changa One", sans-serif; */
+  color: #cce423;
+}
+
+.hero .hero-grid .heading-content .username-btn .username {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.hero .hero-grid .heading-content .username-btn .claim-btn {
+  border: none;
+  padding: 20px 23px;
+  font-weight: 500;
+  color: #212124;
+  background: #e3bbe3;
+  padding: 20px 28px;
+  border-radius: 65px;
+  margin-left: 10px;
+}
+
+.hero .hero-grid .heading-content .username-btn {
+  margin-top: 50px;
+}
+
+.hero .hero-grid .heading-content .heading-subtext {
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+.hero .hero-grid .heading-content .main-heading {
+  font-size: 4rem;
+  letter-spacing: -0.2rem;
+  line-height: 0.9;
+  /* text-align: left; */
+}
+
+.hero .hero-grid .graphic {
+  position: relative;
+}
+.hero .hero-grid .graphic img {
+  height: 450px;
+  width: 400px;
+  position: absolute;
+  left: -20px;
+  transform: scale(1.2);
+}
+
+.hero-2 {
+  padding: 100px 0px;
+  background: #e9c0e9;
+}
+
+.hero-2 .hero-grid-2 {
+  width: 95%;
+  margin: 100px auto;
+  display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 0px;
+}
+
+.hero-2 .hero-grid-2 .heading-content-2 {
+  /* font-family: "Changa One", sans-serif; */
+  color: #502274;
+}
+
+.hero-2 .hero-grid-2 .heading-content-2 .username-btn-2 .username-2 {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.hero-2 .hero-grid-2 .heading-content-2 .username-btn-2 .claim-btn-2 {
+  border: none;
+  padding: 20px 23px;
+  font-weight: 500;
+  color: white;
+  background: #502274;
+  padding: 20px 28px;
+  border-radius: 65px;
+  margin-left: 0px;
+}
+
+.hero-2 .hero-grid-2 .heading-content-2 .username-btn-2 {
+  margin-top: 50px;
+}
+
+.hero-2 .hero-grid-2 .heading-content-2 .heading-subtext-2 {
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+.hero-2 .hero-grid-2 .heading-content-2 .main-heading-2 {
+  font-size: 4rem;
+  letter-spacing: -0.2rem;
+  line-height: 0.9;
+  /* text-align: left; */
+}
+
+.hero-2 .hero-grid-2 .graphic-2 {
+  position: relative;
+}
+.hero-2 .hero-grid-2 .graphic-2 img {
+  height: 450px;
+  width: 400px;
+  position: absolute;
+  left: 30px;
+  transform: scale(1.2);
+}
+
+.hero-3 {
+  padding: 100px 0px;
+  background: #780016;
+}
+
+.hero-3 .hero-grid-3 {
+  width: 95%;
+  margin: 100px auto;
+  display: grid;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 0px;
+}
+
+.hero-3 .hero-grid-3 .heading-content-3 {
+  /* font-family: "Changa One", sans-serif; */
+  color: #e9c0e9;
+}
+
+.hero-3 .hero-grid-3 .heading-content-3 .username-btn-3 .username-3 {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.hero-3 .hero-grid-3 .heading-content-3 .username-btn-3 .claim-btn-3 {
+  border: none;
+  padding: 20px 23px;
+  font-weight: 500;
+  color: white;
+  background: #502274;
+  padding: 20px 28px;
+  border-radius: 65px;
+  margin-left: 0px;
+}
+
+.hero-3 .hero-grid-3 .heading-content-3 .username-btn-3 {
+  margin-top: 50px;
+}
+
+.hero-3 .hero-grid-3 .heading-content-3 .heading-subtext-3 {
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+.hero-3 .hero-grid-3 .heading-content-3 .main-heading-3 {
+  font-size: 4rem;
+  letter-spacing: -0.2rem;
+  line-height: 0.9;
+  /* text-align: left; */
+}
+
+.hero-3 .hero-grid-3 .graphic-3 {
+  position: relative;
+}
+.hero-3 .hero-grid-3 .graphic-3 img {
+  height: 450px;
+  width: 400px;
+  position: absolute;
+  left: -30px;
+  transform: scale(1.2);
+}
+
+.hero-4 {
+  padding: 100px 0px;
+  background: #f3f3f1;
+}
+
+.hero-4 .hero-grid-4 {
+  width: 95%;
+  margin: 100px auto;
+  display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 0px;
+}
+
+.hero-4 .hero-grid-4 .heading-content-4 {
+  /* font-family: "Changa One", sans-serif; */
+  color: #1e2330;
+}
+
+.hero-4 .hero-grid-4 .heading-content-4 .username-btn-4 .username-4 {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.hero-4 .hero-grid-4 .heading-content-4 .username-btn-4 .claim-btn-4 {
+  border: none;
+  padding: 20px 23px;
+  font-weight: 500;
+  color: white;
+  background: #1e2330;
+  padding: 20px 28px;
+  border-radius: 65px;
+  margin-left: 0px;
+}
+
+.hero-4 .hero-grid-4 .heading-content-4 .username-btn-4 {
+  margin-top: 50px;
+}
+
+.hero-4 .hero-grid-4 .heading-content-4 .heading-subtext-4 {
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+.hero-4 .hero-grid-4 .heading-content-4 .main-heading-4 {
+  font-size: 4rem;
+  letter-spacing: -0.2rem;
+  line-height: 0.9;
+  /* text-align: left; */
+}
+
+.hero-4 .hero-grid-4 .graphic-4 {
+  position: relative;
+}
+.hero-4 .hero-grid-4 .graphic-4 img {
+  height: 450px;
+  width: 400px;
+  position: absolute;
+  left: 30px;
+  transform: scale(1.2);
+}
+
+.hero-5 {
+  padding: 100px 0px;
+  background: #cce423;
+}
+
+.hero-5 .hero-grid-5 {
+  width: 95%;
+  margin: 100px auto;
+  display: grid;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 0px;
+}
+
+.hero-5 .hero-grid-5 .heading-content-5 {
+  /* font-family: "Changa One", sans-serif; */
+  color: #1e2330;
+}
+
+.hero-5 .hero-grid-5 .heading-content-5 .username-btn-5 .username-5 {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.hero-5 .hero-grid-5 .heading-content-5 .username-btn-5 .claim-btn-5 {
+  border: none;
+  padding: 20px 23px;
+  font-weight: 500;
+  color: white;
+  background: #1e2330;
+  padding: 20px 28px;
+  border-radius: 65px;
+  margin-left: 0px;
+}
+
+.hero-5 .hero-grid-5 .heading-content-5 .username-btn-5 {
+  margin-top: 50px;
+}
+
+.hero-5 .hero-grid-5 .heading-content-5 .heading-subtext-5 {
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+.hero-5 .hero-grid-5 .heading-content-5 .main-heading-5 {
+  font-size: 4rem;
+  letter-spacing: -0.2rem;
+  line-height: 0.9;
+  /* text-align: left; */
+}
+
+.hero-5 .hero-grid-5 .graphic-5 {
+  position: relative;
+}
+.hero-5 .hero-grid-5 .graphic-5 img {
+  height: 450px;
+  width: 400px;
+  position: absolute;
+  left: -50px;
+  transform: scale(1.2);
+}
+
+.faq {
+  padding: 100px;
+  background: #780016;
+  /* display: flex; */
+}
+
+.faq .faq-grid {
+  padding: 100px 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 020px;
+  margin-top: -50px;
+}
+
+.faq .faq-grid .box {
+  background: #51000f;
+  color: #e9c0e9;
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* padding: 30p 50px; */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+.faq .faq-grid .box h4 {
+  margin-top: 0px;
+  /* display: inline-block; */
+  padding: 40px 30px;
+}
+
+.faq .faq-grid .box i {
+  margin-right: 30px;
+  margin-left: auto;
+}
+
+.faq .faq-heading {
+  margin-left: 320px;
+}
+
+.faq .faq-heading .fa-heading {
+  color: #e3bbe3;
+  font-size: 3.5rem;
+}
+
+.hero-10 {
+  padding: 100px;
+  background: #2596be;
+}
+
+.hero-10 .footer-content {
+  position: relative;
+}
+
+.hero-10 .footer-content .main-heading-10 {
+  letter-spacing: -0.2rem;
+  text-align: center;
+  font-size: 3.3rem;
+  color: white;
+}
+
+.hero-10 .footer-content .username-btn .username {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.hero-10 .footer-content .username-btn .claim-btn {
+  border: none;
+  padding: 20px 23px;
+  font-weight: 500;
+  color: white;
+  background: black;
+  padding: 20px 28px;
+  border-radius: 65px;
+  margin-left: 10px;
+}
+
+.hero-10 .footer-content .username-btn {
+  position: absolute;
+  top: 180px;
+  left: 30%;
+}
+
+.hero-10 footer .footer-container {
+  background: white;
+  border-radius: 25px;
+  /* box-shadow: 4px 0px 8px 8px gray;  */
+  margin-bottom: 100px;
+}
+.hero-10 footer .footer-container .footer-grid {
+  margin-top: 250px;
+  margin-left: 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+}
+
+.hero-10 footer .footer-container .footer-grid ul {
+  color: gray;
+  list-style-type: none;
+  font-size: 0.9rem;
+  line-height: 3;
+}
+
+.hero-10 footer .footer-container .footer-flex {
+  /* position: fixed;
+  top: 7%;
+  left: 1.75%;
+  width: 96.5%; */
+  background: white;
+  display: flex;
+  align-items: center;
+  /* margin: 50px auto; */
+  padding: 12px 15px;
+  border-radius: 80px;
+  /* z-index: 1000; */
+}
+
+.hero-10 footer .footer-container .footer-flex .main-menu {
+  margin-right: -180px;
+  width: 50%;
+}
+
+.hero-10 footer .footer-container .footer-flex .main-menu ul {
+  padding: 0px;
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  margin: auto;
+}
+
+.hero-10 footer .footer-container .footer-flex .main-menu ul li {
+  margin-right: 15px;
+  font-size: 1rem;
+  letter-spacing: -0.003rem;
+}
+
+.hero-10 footer .footer-container .footer-flex .main-menu ul li a {
+  text-decoration: none;
+  color: grey;
+  font-weight: 500;
+  transition: background 0.9ms ease-in-out;
+  padding: 10px;
+}
+
+.hero-10 footer .footer-container .footer-flex .main-menu ul li a:hover {
+  background: rgb(239, 240, 236);
+  padding: 13px 10px;
+  border-radius: 8px;
+}
+
+.hero-10 footer .footer-container .footer-flex .buttons {
+  margin-right: auto;
+  border: none;
+}
+
+.hero-10 footer .footer-container .footer-flex .buttons .btn {
+  border: none;
+  padding: 20px 23px;
+  font-weight: 600;
+}
+.hero-10 footer .footer-container .footer-flex .buttons .btn-1 {
+  background: #f3f3f1;
+  color: #1e2330;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.hero-10 footer .footer-container .footer-flex .buttons .btn-2 {
+  color: white;
+  background: #cce423;
+  padding: 20px 28px;
+  border-radius: 65px;
+}
+
+.hero-10 footer .footer-container .footer-flex .buttons a {
+  text-decoration: none;
+}
+
+.hero-10 .disclaimer {
+  background: red;
+  margin-left: 100px;
+}
+
+.hero-6 {
+  /* padding: 100px; */
+  background: #f3f3f1;
+  /* align-items: center;
+	background: #E3E3E3;
+	display: flex;
+	height: 100vh;
+	justify-content: center; */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+ }
+  100% {
+    transform: translateX(calc(-250px * 7));
+ }
+}
+.hero-6 .slider {
+  /* background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  height: 100px; */
+  margin: auto;
+  /* overflow: hidden; */
+  /* position: relative; */
+  width: 960px;
+  transform: scale(2);
+}
+.hero-6 .slider::before, .slider::after {
+  /* background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); */
+  content: "";
+  height: 100px;
+  position: absolute;
+  /* width: 200px; */
+  z-index: 2;
+}
+.hero-6 .slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.hero-6 .slider::before {
+  left: 0;
+  top: 0;
+}
+.hero-6 .slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.hero-6 .slider .slide {
+  height: 100px;
+  width: 250px;
+}
