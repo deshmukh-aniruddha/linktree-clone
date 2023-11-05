@@ -1273,6 +1273,8 @@ p {
   position: relative;
   bottom: 108px;
   transform: scale(1.4);
+  /* z-index: 999999; */
+
 }
 
 .hero-last .text {
